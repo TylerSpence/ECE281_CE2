@@ -119,3 +119,7 @@ Assert Y3 = '0' Report "String to output if assertion fails" Severity ERROR;
 
 #Debugging
 When creating the self test code for the testbench, several errors were displayed when they shouldn't have been. This was solved by adding an additional wait command to move the assert check away from the border of where the two different iterations of the truth table interacted with each other. 
+
+#Functionality of the Decoder
+The decoder works in a very interesting way. When the ecoder is turned on (EN=1) then the two digit binary number represented by I0 and I1 is converted to the decimal output. For example, when EN=1, I0=1, and I1=0, the binary number created by I0 and I1 is 10, which corresponds to the decimal number 2. The decoder demonstrates this by having an output of 1 in Y2! The 2 is the decimal number represented by the binary number! When the output of I1 and I0 is 11 (decimal 3) then Y3 is activated.
+This has very large potential when replicated on large scale, creating the potential for multiple inputs, such as that found on a keyboard. 
