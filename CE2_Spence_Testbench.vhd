@@ -91,34 +91,81 @@ BEGIN
 I0 <= '0';
 I1 <= '0';
 EN <= '0';
+wait for 1 ns;
+Assert Y0 = '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y1 = '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y2 = '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y3 = '0' Report "String to output if assertion fails" Severity ERROR;
+
      wait for 100 ns;
 I0 <= '0';
 I1 <= '0';
 EN <= '1';
+wait for 1 ns;
+Assert Y0 = '1' Report "String to output if assertion fails" Severity ERROR;
+Assert Y1 = '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y2 = '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y3 = '0' Report "String to output if assertion fails" Severity ERROR;
+
      wait for 100 ns;
 I0 <= '0';
 I1 <= '1';
 EN <= '0';
+wait for 1 ns;
+Assert Y0 = '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y1 = '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y2 = '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y3 = '0' Report "String to output if assertion fails" Severity ERROR;
+
      wait for 100 ns;
 I0 <= '0';
 I1 <= '1';
 EN <= '1';
+wait for 1 ns;
+Assert Y0 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y1 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y2 <= '1' Report "String to output if assertion fails" Severity ERROR;
+Assert Y3 <= '0' Report "String to output if assertion fails" Severity ERROR;
+
      wait for 100 ns;
 I0 <= '1';
 I1 <= '0';
 EN <= '0';
+wait for 1 ns;
+Assert Y0 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y1 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y2 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y3 <= '0' Report "String to output if assertion fails" Severity ERROR;
+
      wait for 100 ns;
 I0 <= '1';
 I1 <= '0';
 EN <= '1';
+wait for 1 ns;
+Assert Y0 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y1 <= '1' Report "String to output if assertion fails" Severity ERROR;
+Assert Y2 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y3 <= '0' Report "String to output if assertion fails" Severity ERROR;
      wait for 100 ns;
 I0 <= '1';
 I1 <= '1';
 EN <= '0';
+wait for 1 ns;
+Assert Y0 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y1 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y2 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y3 <= '0' Report "String to output if assertion fails" Severity ERROR;
+
      wait for 100 ns;
 I0 <= '1';
 I1 <= '1';
 EN <= '1';
+wait for 1 ns;
+Assert Y0 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y1 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y2 <= '0' Report "String to output if assertion fails" Severity ERROR;
+Assert Y3 <= '1' Report "String to output if assertion fails" Severity ERROR;
+
      wait for 100 ns;
 
       wait;
